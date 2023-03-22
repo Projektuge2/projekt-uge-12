@@ -8,12 +8,27 @@
     <script src="https://kit.fontawesome.com/f9fe3152cb.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+<script>
+    function close_nav() {
+        document.getElementById("column_a").style.width = "0px";
+        document.getElementById("close_btn").style.display = "none";
+        document.getElementById("open_btn").style.display = "inline";
+
+    }
+    function open_nav() {
+        document.getElementById("close_btn").style.display = "inline";
+        document.getElementById("open_btn").style.display = "none";
+        document.getElementById("column_a").style.width = "calc(2.5% + 125px)";
+    }
+</script>
 <body>
     <header>
         <div>
             <div class="header_left">
-                <button onclick=""><i class="fa-solid fa-bars fa-xl"></i></button>
-                <a href="">Logo</a>
+                <button class="close_btn" id="close_btn" onclick="close_nav()"><i class="fa-solid fa-bars fa-xl"></i></button>
+                <button class="open_btn" id="open_btn" onclick="open_nav()"><i class="fa-solid fa-bars fa-xl"></i></button>
+                <a href="#">Logo</a>
+
             </div>
             <div class="header_right">
                 <a href="#">Bruger</a>
@@ -23,42 +38,158 @@
     </header>
     <main>
         <div class="row">
-            <div class="column_a">
+            <div class="column_a" id="column_a">
                 <div>
-                <a href="">Indhold 1</a>
-                <a href="">Indhold 2</a>
-                <a href="">Indhold 3</a>
-                <a href="">Indhold 4</a>
-                <a href="">Indhold 5</a>
+                <a href="#">Introduktion til database</a>
+                <a href="#section_2">Databasedesigns 6 faser</a>
+                <a href="#section_3">Indhold 3</a>
+                <a href="#section_4">Indhold 4</a>
+                <a href="#section_5">Indhold 5</a>
                 </div>
             </div>
-            <div class="column_b">
+            <!--Forståelse om og anvendelse af data i brug og ved opbevaring i en database 
+                Implementering og vedligeholdelse af relationelle databaser 
+                Indsætning af data på en sikker måde -->
+            <div class="column_b" id="column_b">
                 <div class="content_PImg">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, tempora nihil! Saepe sapiente blanditiis voluptates necessitatibus, placeat impedit excepturi, fugiat ullam adipisci nulla vitae aut nam laudantium vel consequatur nisi.
-                    Quasi accusamus culpa voluptatem debitis inventore officiis nemo placeat, harum possimus nisi hic odio suscipit eveniet dolor non modi architecto blanditiis aperiam. Consequatur, consectetur culpa. Aliquam laborum sunt consequuntur deleniti.
-                    Earum dolore architecto reprehenderit dignissimos nulla ratione quas at, consequatur voluptatibus magnam, quibusdam quam inventore iusto reiciendis debitis! Impedit nobis explicabo deleniti excepturi. Ex corporis optio itaque maiores, quaerat consequatur?
-                    Corrupti nihil necessitatibus quaerat, sunt vel nam rem voluptatibus asperiores blanditiis consequatur laboriosam eligendi cum tenetur quod repudiandae molestiae delectus minima quas, impedit autem magnam! Minima omnis laborum voluptatibus deserunt?
-                    Quod necessitatibus accusamus quo repellat temporibus? Nulla ab ducimus voluptatibus eaque aspernatur dicta accusamus voluptatum asperiores corporis adipisci totam laboriosam consequuntur corrupti exercitationem fuga, repudiandae rem. Labore beatae aliquid incidunt?</p>
-                    <img src="/Projekt2Uge12/img/BG2.1.png" alt="Billede">
+                    <article id="section_1" class="text_box">
+                        <h2>Introduktion til databasedesign</h2>
+                        <p>Velkommen til databasedesign, her får du en bred forståelse for programmeringssproget MySQL og hvordan databaser kan udvikles for at skabe et optimalt design.</p>
+                        <p>Der vil hermed blive vist hvad du kan forvente af faget på uddannelsen IT-Arkitektur. Du vil blive introduceret til hvad en database er, hvordan man bedst kan implementere dem, hvordan data kan vedligeholdes og blive gemt sikkert.</p>
+                        <p>Desuden vil der snakkes om roller og privilegier og automatisering af databasen i form af indbyggede funktioner.</p>
+                    </article>
+                    <article class="example_box">
+                        <h2>Fakta Boks</h2>
+                        <p>Faget er i 2. semester på IT-Arkitektur</p>
+                        <p>Processen for Databasedesign handler om at designe struktur i form af tabeller, regler og relationer mellem tabeller</p>
+                        <p>Godt Databasedesign er vigtigt for at sikre at data bevares fra hackerer eftersom databaser kan indeholde følsomme brugerinformationer</p>
+                    </article>
+                </div>
+
+                <div class="content_PImg">
+                    <article id="section_2" class="text_box">
+                        <h3>Databasedesigns 6 faser</h3>
+                        <p>I udviklingen af databaser så vil man normalt gå igennem 6 faser. Disse faser sikre databasens integritet og effektivitet og selve funktionaliteten af databasen.</p>
+                        <p>Designprocessen starter ud med definition af mål med database. Derefter kommer man videre til opbevaring og brug af data i den givne database. Når man er færdig med det går man videre til analysering og organisering, som omhandler undersøgelse af krav for den givne database. Har man de ting på plads kan man bevæge sig videre til implementering af databasen, som selvfølgelig handler om, at den givne database bliver implementeret og igangsat. Processen sluttes af med, at man validerer/kontrollerer og tester sin database.</p>
+                        <h3>Databasedesign målsætninger</h3>
+                        <p>Ved at følge disse faser, så vil det være oplagt at vi får nogle målsætninger opfyldt, eftersom dette vil resultere i en funktionel database</p>
+                        <p>Målsætninger er vigtig for en database samt databasens formål. Generelt handler effektiviteten af en database om, at man gerne vil sikre at databasen er i stand til at behandle store mængder af data hurtigt. Integriteten handler om at det er en akkurat data vi har i databasen. Privathed kommer i spil, da man gerne vil beskytte følsomme data imod negativ indtrængen. Sikkerheden generelt er en vigtig målsætning eftersom det også sikrer imod diverse hackerangreb. Implementering handler om at igangsætte og aktivere sin database så man sikrer at den fungerer som den skal. Fleksibilitet handler om at den kan ændres og tilpasses alt efter behov. Til sammen udgør disse målsætninger en god og funktionel database, hvis de er brugt korrekt. </p>
+                    </article>
+                    <article class="text_box">
+                        <h3>De 6 faser</h3>
+                        <ul>
+                            <li>Feasibility Study
+                                <ul>
+                                    <li>Formål klart defineret</li>
+                                </ul>
+                            </li>
+                            <li>Requirement collection and analysis
+                                <ul>
+                                    <li>Hvordan opbevares og bruges data i databasen?</li>
+                                </ul>
+                            </li>
+                            <li>Prototyping & Design
+                                <ul>
+                                    <li>Analyse og organisering</li>
+                                </ul>
+                            </li>
+                            <li>Implementation
+                                <ul>
+                                    <li>Implementering af database</li>
+                                </ul>
+                            </li>
+                            <li>Validation and testing
+                                <ul>
+                                    <li>Validering og test</li>
+                                </ul>
+                            </li>
+                            <li>Operation
+                                <ul>
+                                    <li>Administration/Vedligeholdelse</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h3>Målsætninger</h3>
+                        <ul>
+                            <li>Effektivitet
+                                <ul>
+                                    <li>Ydeevne og resourceforbrug</li>
+                                </ul>
+                            </li>
+                            <li>Integritet
+                                <ul>
+                                    <li>Nøjagtig data</li>
+                                </ul>
+                            </li>
+                            <li>Privathed
+                                <ul>
+                                    <li>Kontrolleret adgang</li>
+                                </ul>
+                            </li>
+                            <li>Sikkerhed
+                                <ul>
+                                    <li>Sikre mod indtrængen og hardware/software fejl</li>
+                                </ul>
+                            </li>
+                            <li>Implementering
+                                <ul>
+                                    <li>Let overgang fra konceptuel til fysisk design</li>
+                                </ul>
+                            </li>
+                            <li>Fleksibilitet
+                                <ul>
+                                    <li>Skal kunne håndtere ændringer</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </article>
+                </div>
+                
+                <div class="content_2P">
+                    <article id="section_3" class="text_box">
+                        <h3>Normalisering</h3>
+                        <p>Normalisering er en designprocess, hvor man strukturerer sin data på en måde, som minimerer redundans og dermed hjælper med at sikre integritet i data. Hvis en database ikke er normaliseret kan det skabe problemer ved opdatering og vedligeholdelse af databasen. Ved normalisering forstås (atomic values). </p>
+                        <p>Der er forskellige niveauer af normalisering som gøres brug af i en database, afhængig af kritikaliteten af data. Formålet med at normalisere er også, at man gerne vil gøre databasen effektiv og sørge for korrekt organisering af data. Tit handler det omkring opdeling af tabeller til mindre tabeller. </p>
+                        <p>Første normalform(1NF) går ud på, at alle værdier i ens tabel skal være “atomic values”, hvilket vil sige, at de skal være enkeltstående og umulige at dele op. Anden normalform(2NF) handler om, at hvis en tabel har en sammensat nøgleværdi, så skal de resterende værdier være afhængige af den. 3. Normalform(3NF) går ud på at der ikke må være værdier uden for den primære nøgle, men som samtidig er afhængige indbyrdes.</p>
+                    </article>
+                    <article class="text_box">
+                        <h3>Redundans</h3>
+                        <p>Når man arbejder med databaser, så vil størrelsen på databaser være forskellige. Nogle databaser vil have så meget data, at det faktisk har en betydning på serveren. Det er hermed vigtigt, at lave sin database på en måde som ikke gør den ineffektiv og langsom for serveren at håndtere.</p>
+                        <p>Det er her, hvor termet redundans kommer ind. Redundans er når den samme data omgår flere gange i en database. Det vil hermed være vigtigt at sammensætte rækkerne i tabeller med kun den information som er nødvendigt. Efter de nævnte normalformer fra før bruges, så vil vi eliminere redundans og samtidig gør databasen nemmere at aflæse. </p>
+                        <p>Desuden så vil eliminering af redundans også sikre at databasen kører optimalt og konsistent</p>
+                    </article>
                 </div>
                 <div class="content_P">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit consectetur adipisci reprehenderit labore! Eaque animi aperiam debitis quo harum nesciunt laborum molestias deleniti ipsam quod! Id laboriosam saepe atque quasi?
-                    Est veritatis consectetur hic fugiat vero quae neque optio eaque molestiae magnam iusto officia at nihil reprehenderit temporibus, qui ad laboriosam reiciendis atque eos quibusdam dolorum quisquam deserunt dolor! Odit.
-                    Quidem doloremque aspernatur dolore consequatur tenetur pariatur consectetur voluptatem adipisci deserunt! Enim ipsum, officia dolores, eveniet, voluptates aliquid rerum aliquam harum iste sint voluptate voluptatibus natus repellat fuga quis voluptas?
-                    Maxime a molestias reprehenderit illo enim officia velit quidem iure itaque blanditiis non laudantium nostrum ex, reiciendis nemo temporibus repellat ullam similique labore explicabo tenetur quam. Vel sunt asperiores odio.
-                    Dolorem, dolorum mollitia hic quam eveniet sed ab maiores quod nisi corporis, enim rerum harum consequuntur non accusantium, culpa neque. Saepe consequatur blanditiis reiciendis voluptates aut exercitationem nam eligendi praesentium.
-                    Laborum enim ipsam esse, id harum provident perferendis aliquam quis. Distinctio, dolores culpa enim cumque esse autem repudiandae doloribus quisquam suscipit perspiciatis. Eius quibusdam animi asperiores quidem, nobis at commodi?
-                    Quis vel adipisci sequi obcaecati consequuntur in magni. Delectus eaque similique aliquam accusamus architecto eum numquam repellat deserunt modi tenetur. Aut eligendi adipisci veniam atque eveniet cum odit ipsum possimus?</p>
+                    <article id="section_4" class="text_box">
+                        <h3>Brugerkonto</h3>
+                        <p>Brugerkonti og privilegier er vigtige emner inden for databasedesign, da de hjælper med at beskytte databasen og dens data mod uautoriseret adgang og misbrug. Det er ikke en god ide at give en normal bruger for høje rettighed. Man kigger på hvilke handlinger der er påkrævede for brugeren at kunne udføre og tilretter adgangsniveauet. For eksempel bør en normal bruger ikke kunne udføre arbejde på selve databasen men begrænses til kun at kunne arbejde i de tabeller der er relevante.</p>
+                        <h3>Sikkerhedskopiering og restore</h3>
+                        <p>Sikkerhedskopiering og restore er afgørende elementer i enhver databaseadministratorers opgaver, da de hjælper med at beskytte databasen mod datatab og genoprette den i tilfælde af en nødsituation. Datatab er en af det største udfordringer man kan støde på ved brugen af en database. Ved designet af databasen bør man sætte sig ned og lave en risikovurdering</p>
+                    <article class="text_box">
+                        <h3></h3>
+                    </article>
                 </div>
-                <div class="content_P">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique nam exercitationem nobis? Alias aliquid pariatur quibusdam officia dolore obcaecati odit. Veniam eligendi placeat expedita doloribus distinctio voluptatibus, eveniet porro fugiat.
-                    Quis dolore est consectetur quod rem ea nisi vero reiciendis saepe dolores provident alias, pariatur totam fuga odit ad delectus aliquid, sunt optio a quos voluptates amet voluptas fugit? Earum?
-                    Sint, praesentium? Deserunt aliquam quisquam officiis ducimus fugiat magnam illum corrupti. Harum fugit nam, velit dolorum sed odit, non quod natus veniam et, atque reprehenderit doloribus dolor quam distinctio laudantium?
-                    Veritatis nemo expedita dolor! Aspernatur itaque voluptate cupiditate. Odit expedita culpa sit commodi adipisci laudantium, sapiente eveniet aliquid dolore quod, cum totam! Magnam ex perferendis dignissimos iusto nihil reprehenderit dolore.
-                    Repudiandae dolor, placeat molestias sequi minima ad possimus sunt, officia consequatur quisquam, minus aperiam deleniti laboriosam suscipit! Impedit hic molestias inventore, quos accusamus quaerat tempore saepe veniam at repellat placeat!</p>
+                <div class="content_4P">
+                    <article id="section_5" class="text_box">
+                        <h4>Views</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet qui fuga, soluta odio obcaecati ullam quibusdam tempora sint itaque quisquam nemo doloremque, nam illum nobis repudiandae harum distinctio perferendis consequuntur!</p>
+                    </article>
+                    <article class="text_box">
+                        <h4>Stored procedures</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tenetur, libero tempore eum dolore repudiandae quam iure ut consequuntur eos hic sint voluptate et. Sint harum facere quia molestias accusantium?</p>
+                    </article>
+                    <article class="text_box">
+                        <h4>Stored functions</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium ad praesentium consequuntur explicabo exercitationem deleniti! Recusandae aspernatur et dolorem cum, obcaecati explicabo temporibus, eos maxime possimus magnam distinctio officia voluptates.</p>
+                    </article>
+                    <article class="text_box">
+                        <h4>Triggers</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi assumenda, aperiam, rem maxime voluptate facilis amet porro sed minus laborum id esse eveniet adipisci quos velit illo sequi deserunt! Ab.</p>
+                    </article>
                 </div>
                 <footer>
-                        <p>&copy; Gruppe 2</p>
+                    <p>&copy; Gruppe 2</p>
                 </footer>
             </div>
         </div>
