@@ -42,9 +42,10 @@
                 <div>
                 <a href="#">Introduktion til database</a>
                 <a href="#section_2">Databasedesigns 6 faser</a>
-                <a href="#section_3">Indhold 3</a>
-                <a href="#section_4">Indhold 4</a>
-                <a href="#section_5">Indhold 5</a>
+                <a href="#section_3">Databasedesign målsætning</a>
+                <a href="#section_4">Normalisering og Redundans</a>
+                <a href="#section_5">Brugerkonto og Sikkerhedskopiering</a>
+                <a href="#section_5">Introduktion til funktioner i MySQL</a>
                 </div>
             </div>
             <!--Forståelse om og anvendelse af data i brug og ved opbevaring i en database 
@@ -58,24 +59,20 @@
                         <p>Der vil hermed blive vist hvad du kan forvente af faget på uddannelsen IT-Arkitektur. Du vil blive introduceret til hvad en database er, hvordan man bedst kan implementere dem, hvordan data kan vedligeholdes og blive gemt sikkert.</p>
                         <p>Desuden vil der snakkes om roller og privilegier og automatisering af databasen i form af indbyggede funktioner.</p>
                     </article>
-                    <article class="example_box">
+                    <article class="fakta_box">
                         <h2>Fakta Boks</h2>
                         <p>Faget er i 2. semester på IT-Arkitektur</p>
                         <p>Processen for Databasedesign handler om at designe struktur i form af tabeller, regler og relationer mellem tabeller</p>
                         <p>Godt Databasedesign er vigtigt for at sikre at data bevares fra hackerer eftersom databaser kan indeholde følsomme brugerinformationer</p>
                     </article>
                 </div>
-
                 <div class="content_PImg">
                     <article id="section_2" class="text_box">
                         <h3>Databasedesigns 6 faser</h3>
                         <p>I udviklingen af databaser så vil man normalt gå igennem 6 faser. Disse faser sikre databasens integritet og effektivitet og selve funktionaliteten af databasen.</p>
                         <p>Designprocessen starter ud med definition af mål med database. Derefter kommer man videre til opbevaring og brug af data i den givne database. Når man er færdig med det går man videre til analysering og organisering, som omhandler undersøgelse af krav for den givne database. Har man de ting på plads kan man bevæge sig videre til implementering af databasen, som selvfølgelig handler om, at den givne database bliver implementeret og igangsat. Processen sluttes af med, at man validerer/kontrollerer og tester sin database.</p>
-                        <h3>Databasedesign målsætninger</h3>
-                        <p>Ved at følge disse faser, så vil det være oplagt at vi får nogle målsætninger opfyldt, eftersom dette vil resultere i en funktionel database</p>
-                        <p>Målsætninger er vigtig for en database samt databasens formål. Generelt handler effektiviteten af en database om, at man gerne vil sikre at databasen er i stand til at behandle store mængder af data hurtigt. Integriteten handler om at det er en akkurat data vi har i databasen. Privathed kommer i spil, da man gerne vil beskytte følsomme data imod negativ indtrængen. Sikkerheden generelt er en vigtig målsætning eftersom det også sikrer imod diverse hackerangreb. Implementering handler om at igangsætte og aktivere sin database så man sikrer at den fungerer som den skal. Fleksibilitet handler om at den kan ændres og tilpasses alt efter behov. Til sammen udgør disse målsætninger en god og funktionel database, hvis de er brugt korrekt. </p>
                     </article>
-                    <article class="text_box">
+                    <article class="example_box">
                         <h3>De 6 faser</h3>
                         <ul>
                             <li>Feasibility Study
@@ -109,6 +106,14 @@
                                 </ul>
                             </li>
                         </ul>
+                </div>
+                <div class="content_PImg">
+                    <article id="section_3" class="text_box">
+                        <h3>Databasedesign målsætninger</h3>
+                        <p>Ved at følge disse faser, så vil det være oplagt at vi får nogle målsætninger opfyldt, eftersom dette vil resultere i en funktionel database</p>
+                        <p>Målsætninger er vigtig for en database samt databasens formål. Generelt handler effektiviteten af en database om, at man gerne vil sikre at databasen er i stand til at behandle store mængder af data hurtigt. Integriteten handler om at det er en akkurat data vi har i databasen. Privathed kommer i spil, da man gerne vil beskytte følsomme data imod negativ indtrængen. Sikkerheden generelt er en vigtig målsætning eftersom det også sikrer imod diverse hackerangreb. Implementering handler om at igangsætte og aktivere sin database så man sikrer at den fungerer som den skal. Fleksibilitet handler om at den kan ændres og tilpasses alt efter behov. Til sammen udgør disse målsætninger en god og funktionel database, hvis de er brugt korrekt. </p>
+                    </article>
+                    <article class="example_box">
                         <h3>Målsætninger</h3>
                         <ul>
                             <li>Effektivitet
@@ -145,9 +150,9 @@
 
                     </article>
                 </div>
-                
+
                 <div class="content_2P">
-                    <article id="section_3" class="text_box">
+                    <article id="section_4" class="text_box">
                         <h3>Normalisering</h3>
                         <p>Normalisering er en designprocess, hvor man strukturerer sin data på en måde, som minimerer redundans og dermed hjælper med at sikre integritet i data. Hvis en database ikke er normaliseret kan det skabe problemer ved opdatering og vedligeholdelse af databasen. Ved normalisering forstås (atomic values). </p>
                         <p>Der er forskellige niveauer af normalisering som gøres brug af i en database, afhængig af kritikaliteten af data. Formålet med at normalisere er også, at man gerne vil gøre databasen effektiv og sørge for korrekt organisering af data. Tit handler det omkring opdeling af tabeller til mindre tabeller. </p>
@@ -161,32 +166,47 @@
                     </article>
                 </div>
                 <div class="content_P">
-                    <article id="section_4" class="text_box">
+                    <article id="section_5" class="text_box">
                         <h3>Brugerkonto</h3>
                         <p>Brugerkonti og privilegier er vigtige emner inden for databasedesign, da de hjælper med at beskytte databasen og dens data mod uautoriseret adgang og misbrug. Det er ikke en god ide at give en normal bruger for høje rettighed. Man kigger på hvilke handlinger der er påkrævede for brugeren at kunne udføre og tilretter adgangsniveauet. For eksempel bør en normal bruger ikke kunne udføre arbejde på selve databasen men begrænses til kun at kunne arbejde i de tabeller der er relevante.</p>
                         <h3>Sikkerhedskopiering og restore</h3>
                         <p>Sikkerhedskopiering og restore er afgørende elementer i enhver databaseadministratorers opgaver, da de hjælper med at beskytte databasen mod datatab og genoprette den i tilfælde af en nødsituation. Datatab er en af det største udfordringer man kan støde på ved brugen af en database. Ved designet af databasen bør man sætte sig ned og lave en risikovurdering</p>
-                    <article class="text_box">
-                        <h3></h3>
                     </article>
                 </div>
-                <div class="content_4P">
-                    <article id="section_5" class="text_box">
-                        <h4>Views</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet qui fuga, soluta odio obcaecati ullam quibusdam tempora sint itaque quisquam nemo doloremque, nam illum nobis repudiandae harum distinctio perferendis consequuntur!</p>
-                    </article>
-                    <article class="text_box">
-                        <h4>Stored procedures</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tenetur, libero tempore eum dolore repudiandae quam iure ut consequuntur eos hic sint voluptate et. Sint harum facere quia molestias accusantium?</p>
-                    </article>
-                    <article class="text_box">
-                        <h4>Stored functions</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium ad praesentium consequuntur explicabo exercitationem deleniti! Recusandae aspernatur et dolorem cum, obcaecati explicabo temporibus, eos maxime possimus magnam distinctio officia voluptates.</p>
-                    </article>
-                    <article class="text_box">
-                        <h4>Triggers</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi assumenda, aperiam, rem maxime voluptate facilis amet porro sed minus laborum id esse eveniet adipisci quos velit illo sequi deserunt! Ab.</p>
-                    </article>
+                <div class="content_2box">
+                    <div class="content_box">
+                        <article id="section_6" class="text_box">
+                            <h3>Introduktion til funktioner i MySQL</h3>
+                            <p>I databaser der er det muligt at bruge forskellige funktioner til at gøre det nemmere at arbejde med databasen. Disse funktioner sikre også at dem som har adgang til databasen ender med at få et god og nem arbejdsmiljø omgående databasen</p>
+                            <p>Der bruges f.eks. funktionerne Views, Stored procedures, Stored functions og Triggers</p>
+                        </article>
+                    </div>
+                    <div class="content_4P">
+                        <article class="example_box">
+                            <h4>Views</h4>
+                            <li>Views repræsentere en del af en eller flere tabellers data</li>
+                            <li>data kan manipuleres ligesom en normal tabel</li>
+                            <li>Gemmer kompleks kode og gør at det kan genbruges for at vise samme forespørgsel</li>
+                        </article>
+                        <article class="example_box">
+                            <h4>Stored procedures</h4>
+                            <li>Samling af SQL statements som kan blive tilkaldt senere</li>
+                            <li>Bruges tit til komplekse operationer som indeholder inviklede SQL kode</li>
+                            <li>Kan bruges til at vedligeholde databasen og holde styr på sikkerhed, reducering af fejl og skabe konsistens</li>
+                        </article>
+                        <article class="example_box">
+                            <h4>Stored functions</h4>
+                            <li>Kan muligvis simplificere sql statements, eftersom de konverteres til funktioner som kan fremkaldes</li>
+                            <li>Forbedre læsbarhed og vedligeholdelse</li>
+                            <li>Skal returnere data gennem en return value</li>
+                        </article>
+                        <article class="example_box">
+                            <h4>Triggers</h4>
+                            <li>Triggers kører som respons til specifikke events i databasen</li>
+                            <li>Skaber integritet og konsistens i databasen, hvilket f.eks. sikre at dataen forbliver ensformet</li>
+                            <li>Kan blive udført enten før eller efter en operation i en specifik tabel som triggeren er tilsat</li>
+                        </article>
+                    </div>
                 </div>
                 <footer>
                     <p>&copy; Gruppe 2</p>

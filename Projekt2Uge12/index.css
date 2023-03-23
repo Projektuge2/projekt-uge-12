@@ -1,11 +1,14 @@
-
+* {
+    padding: 0;
+    margin: 0;
+}
 body {
     width: 100%;
     height: 100%;
     max-width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #B4C2C1; /* #ccd6d9 */
+    background-color: rgb(201, 218, 226); /* #ccd6d9 #b3c2cd rgb(162, 194, 206)*/
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 header {
@@ -17,6 +20,7 @@ header {
     position: fixed;
     transition-duration: 0.5s;
 }
+
 h2 {
     font-size: 40px;
     padding-bottom: 6px;
@@ -39,7 +43,14 @@ h4 {
     margin: 0;
 }
 li {
-    margin: 4.2px;
+    margin: 12px;
+}
+footer {
+    display: flex;
+    background-color: #8494b1;
+    margin-top: 30px;
+    padding: 10px;
+    justify-content: center;
 }
 header > div {
     display: flex;
@@ -97,17 +108,21 @@ header > div > div > button > i {
     padding-top: 65px;
 }
 .column_a {
+    display: grid;
     background-color: #444D57; /* #5a5a60*/
     width: calc(2.5% + 125px);
-    height: 100%;
+    height: calc(100% - 65px);
     position: fixed;
     overflow-x: hidden;
     padding-top: 10px;
     transition: 0.5s;
+    align-content: space-between;
+    
 }
 .column_a > div {
     display: grid;
     width: 100%;
+    height: fit-content;
 }
 .column_a > div > a {
     justify-self: center;
@@ -160,7 +175,10 @@ header > div > div > button > i {
     padding: 15px;
 }
 .content_PImg > article {
-    padding: 20px 35px;
+    padding: 20px 0px 20px 35px;
+}
+.example_box > ul {
+    padding: 1px;
 }
 .content_P > article {
     padding: 20px 35px;
@@ -194,31 +212,46 @@ header > div > div > button > i {
 }
 .content_4P {
     display: grid;
-    grid-gap: 10px;
     justify-self: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: fit-content;
-    width: 60%;
+    width: 100%;
+    max-width: 100%;
     border-radius: 20px;
-    margin-top: 5px;
-    padding: 15px;
 } 
 .content_4P > article {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+.content_2box {
+    display: grid;
+    justify-self: center;
+    margin-top: 15px;
+}
+.content_box {
+    display: grid;
+    justify-self: center;
+    height: fit-content;
+    width: 100%;
+    border-radius: 20px;
+}
+.content_box > article {
+    padding: 20px 35px;
+}
+.content_2box > div > div {
+    grid-template-columns: 1fr;
+}
 .example_box {
-    background-color: #ffdd6f;
+    background-color: #ffebab; /* #f5cb42 og #ffebab*/
+    padding: 0;
+}
+.fakta_box {
+    background-color: #ffdf7e; /* #ffdf7e*/
 }
 .text_box {
-    background-color: #ffffff;
+    background-color: #e5f1ff;
 }
-footer {
-    display: flex;
-    background-color: #7d8798;
-    margin-top: 30px;
-    justify-content: center;
 
-}
 @media screen and (max-width: 1400px) {
     .column_b > div {
         width: 72%;
@@ -248,6 +281,9 @@ footer {
     }
     .header_left > a {
         margin-left: 75px;
+    }
+    div {
+        word-wrap: break-word;
     }
     .column_a {
         width: calc(2.5% + 125px);
@@ -294,6 +330,16 @@ footer {
         padding: 10px 15px 25px 15px;
         background-color: rgb(255, 255, 255);
     }
+    .content_2box {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-rows: 1fr 3fr;
+        justify-self: center;
+        height: fit-content;
+        border-radius: 20px;
+        margin-top: 5px;
+        padding: 15px;
+    }
     .content_4P {
         display: grid;
         justify-content: center;
@@ -303,11 +349,21 @@ footer {
         border-radius: 20px;
         background-color: rgb(255, 255, 255);
     }
-    .column_b > div > article {
+    .content_2box {
         background-color: #ffffff;
+    }
+    .column_b > div > article {
+        background-color: #ffeba1;
         margin-right: 0px;
-        padding: 0px;
-        border-radius: 20px;
+        padding: 10px;
+    }
+    ul {
+        padding-left: 30px;
+    }
+    li {
+        font-size: medium;
+        list-style-type: none;
+
     }
     .column_b > div > article > img {
         max-height: 100%;
@@ -318,34 +374,7 @@ footer {
     }
     .column_b > div > article > p {
         font-size: large;
-        background-color: #ffffff;
         line-height: 1;
     }
     
-}
-@media screen and (max-width: 400px) {
-    header {
-        display: flex;
-        height: 40px;
-        width: 100%;
-        justify-content: center;
-        position:static;
-    }
-    header > div > div > a {
-        padding: 10px;
-        text-decoration: none;
-    }
-    .header_left > button {
-        position: fixed;
-        max-height: 30px;
-        max-width: 30px;
-        width: 50px;
-        margin-left: 5px;
-    }
-    .header_left > button > i {
-        font-size: 1.2em;
-    }
-    .header_left > a {
-        margin-left: 40px;
-    }
 }
